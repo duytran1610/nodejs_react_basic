@@ -5,7 +5,12 @@ class Component1 extends Component {
     // state
     state = {
         firstName: '',
-        lastName: ''
+        lastName: '',
+        arrJobs: [
+            {id: 'abcJob1', title: 'Developer', salary: '500$'},
+            {id: 'abcJob2', title: 'Tester', salary: '500$'},
+            {id: 'abcJob3', title: 'Leader', salary: '1000$'}
+        ]
     }
 
     handleFirstName = (e) => {
@@ -40,9 +45,10 @@ class Component1 extends Component {
                 </form> 
 
                 <ChildComponent1 
-                    name={'child one'}
+                    name={this.state.firstName}
                     age={'12'}
-
+                    address={'Hanoi'}
+                    arrJobs={this.state.arrJobs}
                 />
 
             </>

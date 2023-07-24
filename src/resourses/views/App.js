@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import '../styles/App.scss';
+import Component1 from './Exam/component1';
 
 function App() {
   return (
@@ -9,14 +10,7 @@ function App() {
         <p>
           Hello world!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Component1/>
       </header>
     </div>
   );

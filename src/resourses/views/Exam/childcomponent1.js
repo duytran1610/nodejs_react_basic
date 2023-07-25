@@ -13,7 +13,7 @@ class ChildComponent1 extends Component {
     }
 
     // re-render
-    render () {
+    render() {
         console.log('>>>check data: ', this.props);
         let {arrJobs} = this.props;
         let {showJobs} = this.state;

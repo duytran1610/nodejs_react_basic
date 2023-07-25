@@ -19,6 +19,24 @@ class Component1 extends Component {
         })
     }
 
+    deleteAJob = (job) => {
+        let currentListJob = this.state.arrJobs.filter((item) => item.id !== job.id);
+
+        this.setState({
+            arrJobs: currentListJob
+        })
+    }
+
+    // invoked immediately after updating occurs. This method is not called for the initial render.
+    componentDidUpdate(prevProps, prevState) {
+        console.log('>>>> run did update: ', 'prev state: ', prevState, 'current state: ', this.state);
+    }
+
+    // invoked immediately after a component is mounted
+    componentDidMount() {
+        console.log('>>>> run component did mount.');
+    }
+
     // re-render
     render () {
         console.log('check render: ', this.state);
@@ -30,6 +48,7 @@ class Component1 extends Component {
 
                 <ChildComponent1 
                     arrJobs={this.state.arrJobs}
+                    deleteAJob={this.deleteAJob}
                 />
 
             </>

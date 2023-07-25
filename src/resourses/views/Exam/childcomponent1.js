@@ -1,4 +1,5 @@
 import {Component} from 'react';
+import './Demo.scss';
 
 class ChildComponent1 extends Component {
     // state
@@ -12,6 +13,10 @@ class ChildComponent1 extends Component {
         })
     }
 
+    handleOnClickDelete = (item) => {
+        this.props.deleteAJob(item);
+    }
+
     // re-render
     render() {
         console.log('>>>check data: ', this.props);
@@ -20,6 +25,7 @@ class ChildComponent1 extends Component {
         let listJobs =arrJobs.map((item) => 
                         <div key={item.id}>
                             {item.title} - {item.salary}$
+                            &nbsp;<span onClick={() => this.handleOnClickDelete(item)}>x</span>
                         </div>
                     );
         return (
@@ -35,7 +41,11 @@ class ChildComponent1 extends Component {
                         <div><button onClick={() => this.handleClick()}>Hidden</button></div>
                     </>
                     :
-                    <div><button onClick={() => this.handleClick()}>Show</button></div>
+                    <div>
+                        <button className='btn-show' onClick={() => this.handleClick()}>
+                            Show
+                        </button>
+                    </div>
                }
             </>
         );

@@ -10,7 +10,7 @@ class ChildComponent1 extends Component {
     handleClick = () => {
         this.setState({
             showJobs: !this.state.showJobs
-        })
+        });
     }
 
     handleOnClickDelete = (item) => {

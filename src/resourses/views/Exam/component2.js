@@ -36,7 +36,7 @@ class Component2 extends Component {
         this.setState({
             title: '',
             salary: ''
-        })
+        });
     }
 
     render() {

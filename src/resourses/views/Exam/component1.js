@@ -16,7 +16,7 @@ class Component1 extends Component {
         console.log('>>>check function:', job);
         this.setState({
             arrJobs: [...this.state.arrJobs, job]
-        })
+        });
     }
 
     deleteAJob = (job) => {
@@ -24,7 +24,7 @@ class Component1 extends Component {
 
         this.setState({
             arrJobs: currentListJob
-        })
+        });
     }
 
     // invoked immediately after updating occurs. This method is not called for the initial render.

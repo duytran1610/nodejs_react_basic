@@ -7,9 +7,9 @@ class Component1 extends Component {
         firstName: '',
         lastName: '',
         arrJobs: [
-            {id: 'abcJob1', title: 'Developer', salary: '500$'},
-            {id: 'abcJob2', title: 'Tester', salary: '500$'},
-            {id: 'abcJob3', title: 'Leader', salary: '1000$'}
+            {id: 'abcJob1', title: 'Developer', salary: '500'},
+            {id: 'abcJob2', title: 'Tester', salary: '400'},
+            {id: 'abcJob3', title: 'Leader', salary: '1000'}
         ]
     }
 

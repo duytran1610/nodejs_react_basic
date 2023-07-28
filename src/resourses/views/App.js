@@ -21,11 +21,15 @@ function App() {
           
           
           <Routes>
-            <Route path="/" element={<Home />} exact />
-            <Route path="/todo" element={<ListTodo />} />
-            <Route path="/about" element={<Component1 />} />
-            <Route path="/user" element={<ListUser />} exact/>
-            <Route path="/user/:id" element={<DetailUser />} />
+            <Route path="/">
+              <Route path="todo" element={<ListTodo />} />
+              <Route path="about" element={<Component1 />} />
+              <Route path="user">
+                <Route path=":id" element={<DetailUser />} />
+                <Route index element={<ListUser />} />
+              </Route>
+              <Route index element={<Home />} />
+            </Route>
           </Routes>
           
         </header>

@@ -29,11 +29,12 @@ class ListTodo extends Component {
         toast.success('Delete success!');
     }
 
+    // 
     handleEditTodo = (item) => {
         let {editTodo, listTodos} = this.state;
         let isEmpty = Object.keys(editTodo).length === 0;
 
-        // save
+        // button save
         if (!isEmpty && editTodo.id === item.id) {
             let listTodosCopy = listTodos;
             let index = listTodos.findIndex(todo => todo.id === item.id);
@@ -49,12 +50,13 @@ class ListTodo extends Component {
             return;
         }
 
-        // edit
+        // button edit (lấy giá trị của item và gán cho thuộc tính editTodo của state)
         this.setState({
             editTodo: item
         })
     }
 
+    // change info of 1 todo when click button 'edit'
     handleChangeEditTodo = (e) => {
         let editTodoCopy = {...this.state.editTodo};
         editTodoCopy.title = e.target.value;

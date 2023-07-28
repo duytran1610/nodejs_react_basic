@@ -17,7 +17,6 @@ class DetailUser extends Component {
                 this.setState({
                     user: res.data.data
                 });
-                //console.log(this.state.user);
             }
             catch (e) {
                 toast.error(`Missing get information's user!`);
